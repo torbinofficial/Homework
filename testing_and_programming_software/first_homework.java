@@ -1,13 +1,15 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.SortedSet;
+import java.util.TreeSet;
 
 
 public class first_homework {
     public static void main(String[] args) {
 
         //var x = new String("sttressed");
-        System.out.println(FirstNonRepeatingLetter("tete"));
+        System.out.println(SortFriends("Fred:Corwill;Barney:Tornzbull;Adam:Corwill"));
     }
 
     //Task1
@@ -71,4 +73,14 @@ public class first_homework {
         return result;
     }
     //Task5
+    static String SortFriends(String s) {
+        s = s.toUpperCase();
+        String[] str = s.split(";");
+        SortedSet<String> results = new TreeSet<>();
+        for (int i = 0; i < str.length; i++) {
+            String[] person = str[i].split(":");
+            results.add("(" + person[1] + ", " + person[0] +")");
+        }
+        return String.join("", results);
+    }
 }
