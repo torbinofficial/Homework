@@ -3,7 +3,7 @@ import java.util.Arrays;
 import java.util.List;
 
 
-public class First_homework {
+public class first_homework {
     public static void main(String[] args) {
 
         //var x = new String("sttressed");
@@ -70,4 +70,5 @@ public class First_homework {
                     result++;
         return result;
     }
+    //Task5
 }
