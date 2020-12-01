@@ -88,7 +88,7 @@ public class first_homework {
         return(number == 0) ? 1 : (int) Math.ceil(Math.log10(Math.abs(number) + 0.5));
     }
 
-    //Extra Task 1
+    //Extra Task 1 (No tests)
     static int NextBiggerNumber(int number) {
 
         int size = getCountsOfDigits(number);
