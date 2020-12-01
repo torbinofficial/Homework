@@ -1,5 +1,6 @@
+package first_homework;
+
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.SortedSet;
 import java.util.TreeSet;
@@ -8,8 +9,7 @@ import java.util.TreeSet;
 public class first_homework {
     public static void main(String[] args) {
 
-        //var x = new String("sttressed");
-        System.out.println(SortFriends("Fred:Corwill;Barney:Tornzbull;Adam:Corwill"));
+        System.out.println(NextBiggerNumber(111));
     }
 
     //Task1
@@ -82,5 +82,41 @@ public class first_homework {
             results.add("(" + person[1] + ", " + person[0] +")");
         }
         return String.join("", results);
+    }
+
+    public static int getCountsOfDigits(long number) {
+        return(number == 0) ? 1 : (int) Math.ceil(Math.log10(Math.abs(number) + 0.5));
+    }
+
+    //Extra Task 1
+    static int NextBiggerNumber(int number) {
+
+        int size = getCountsOfDigits(number);
+        Integer[] numbers = new Integer[size];
+        boolean Swaped = false;
+        for (int i = numbers.length - 1; i >= 0; i--) {
+            numbers[i] = number%10;
+            number /=10;
+        }
+
+        for (int i = 0; i + 1 < numbers.length; i++) {
+            if (numbers[i] < numbers[i + 1] ) {
+                var temp = numbers[i + 1];
+                numbers[i + 1] = numbers[i];
+                numbers[i] = temp;
+                Swaped = true;
+                break;
+            }
+        }
+        if (Swaped) {
+            int result = 0;
+            for (int i = 0; i < numbers.length; i++ ) {
+                result *= 10;
+                result += numbers[i];
+            }
+            return result;
+        } else {
+            return -1;
+        }
     }
 }
