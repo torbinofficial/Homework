@@ -8,8 +8,8 @@ import java.util.TreeSet;
 
 public class first_homework {
     public static void main(String[] args) {
-
-        System.out.println(NextBiggerNumber(111));
+        System.out.println(RecursiveDigitalRoot(715));
+        //System.out.println(NextBiggerNumber(111));
     }
 
     //Task1
@@ -48,6 +48,19 @@ public class first_homework {
     }
 
     //Task3
+    static int RecursiveDR(int number) {
+        if (number < 10)
+            return number;
+        return number%10 + RecursiveDR(number/10);
+    }
+
+    static int RecursiveDigitalRoot(int number) {
+        while (number > 9) {
+            number = RecursiveDR(number);
+        }
+        return number;
+    }
+
     static int DigitalRoot(int number) {
         int result = 0;
         while (number != 0) {
