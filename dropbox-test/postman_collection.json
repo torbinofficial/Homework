@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "a9dc88e8-6a12-43b1-bcbd-7392cd3f69",
+		"name": "Homework: WebAPIs bascis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Upload file",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer _acl2i-uuvkAAAAAAAAAAW7lm017G4RD5d5WpAxuCgrBbcCOB-FPfxV_7d_X2LNK"
+					},
+					{
+						"key": "Dropbox-API-Arg",
+						"value": "{\"mode\":\"add\",\"autorename\":true,\"mute\":false,\"path\":\"/test.txt\"}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/octet-stream"
+					}
+				],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": "src/resources/test.txt"
+					}
+				},
+				"url": {
+					"raw": "https://content.dropboxapi.com/2/files/upload",
+					"protocol": "https",
+					"host": [
+						"content",
+						"dropboxapi",
+						"com"
+					],
+					"path": [
+						"2",
+						"files",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetFileMetadata",
+			"request": {
+				"method": "POST",
+				"header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer _acl2i-uuvkAAAAAAAAAAW7lm017G4RD5d5WpAxuCgrBbcCOB-FPfxV_7d_X2LNK"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+				],
+				"body": {
+					"mode": "file",
+					"raw": "{\n\t\"path\": \"/test.txt\"\n}"
+				},
+				"url": {
+					"raw": "https://api.dropboxapi.com/2/files/get_metadata",
+					"protocol": "https",
+					"host": [
+						"api",
+						"dropboxapi",
+						"com"
+					],
+					"path": [
+						"2",
+						"files",
+						"get_metadata"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete File",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer _acl2i-uuvkAAAAAAAAAAW7lm017G4RD5d5WpAxuCgrBbcCOB-FPfxV_7d_X2LNK"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "file",
+					"raw": "{\n\t\"path\":\"/test.txt\"\n}"
+				},
+				"url": {
+					"raw": "https://api.dropboxapi.com/2/files/delete_v2",
+					"protocol": "https",
+					"host": [
+						"api",
+						"dropboxapi",
+						"com"
+					],
+					"path": [
+						"2",
+						"files",
+						"delete_v2"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
