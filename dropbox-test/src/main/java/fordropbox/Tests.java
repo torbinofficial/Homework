@@ -35,7 +35,7 @@ public class Tests {
 	@Order(2)
     @Test
     public void get_metadata_test() {
-        Map<String,String> path = new HashMap<>();
+        Map<String,String> path = new HashMap<String,String>();
         path.put("path", "/test.txt");
 
         given().headers("Authorization","Bearer " + auth_token, "Content-Type", "application/json").body(path)
@@ -46,7 +46,7 @@ public class Tests {
 	@Order(3)
     @Test
     public void delete_test() {
-        Map<String,String> path = new HashMap<>();
+        Map<String,String> path = new HashMap<String,String>();
         path.put("path", "/test.txt");
 
         given().headers("Authorization","Bearer " + auth_token, "Content-Type", "application/json").body(path)
