@@ -18,7 +18,7 @@ import static io.restassured.config.EncoderConfig.encoderConfig;
 public class Tests {
 	private static String file_path = "D:/Education/Programs/Selenium2/dropbox-test/src/main/resources/test.txt";
 	//dropbox authentication token
-	private static String auth_token = "sl.AoJQTllsXqu7m1vPQUiEydEzcv2OIUXvDVCq_VaDRGwWyXbCr-OxZS1TDyCTxboMsELKvNL8vK407L1_Dtnq64Ft1n5DA26Jr21AfTCvPUMic3lF-gpybTbEm3aw2OcTlBf2a-in";
+	private static String auth_token = "_acl2i-uuvkAAAAAAAAAAW7lm017G4RD5d5WpAxuCgrBbcCOB-FPfxV_7d_X2LNK";
 	
 	@Order(1)
     @Test
