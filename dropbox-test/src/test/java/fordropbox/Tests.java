@@ -16,7 +16,7 @@ import static io.restassured.config.EncoderConfig.encoderConfig;
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 
 public class Tests {
-	private static String file_path = "D:/Education/Programs/Selenium2/dropbox-test/src/main/resources/test.txt";
+	private static String file_path = "D:/Education/Programs/Selenium2/dropbox-test/src/test/resources/test.txt";
 	//dropbox authentication token
 	private static String auth_token = "_acl2i-uuvkAAAAAAAAAAW7lm017G4RD5d5WpAxuCgrBbcCOB-FPfxV_7d_X2LNK";
 	
